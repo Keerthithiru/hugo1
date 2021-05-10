@@ -1,0 +1,61 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme="learn"
+
+[params]
+  editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
+  description = "Tesco training"
+  author = "Mathieu Cornic"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  disableLandingPageButton = true
+  disableMermaid = false
+  customMermaidURL = "https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"
+  titleSeparator = "::"
+  # When using mulitlingual website, disable the switch language button.
+  disableLanguageSwitchingButton = true
+
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+defaultContentLanguage = "en"
+# Force to have /en/my-page and /fr/my-page routes, even for default language.
+defaultContentLanguageInSubdir= true
+
+[Languages]
+[Languages.en]
+title = "Tesco training"
+weight = 1
+languageName = "English"
+
+[Languages.fr]
+title = "Tesco du trèaining "
+weight = 2
+languageName = "Français"
+
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/matcornic/hugo-theme-learn"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-camera'></i> Showcases"
+url = "/showcase"
+weight = 11
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bookmark'></i> Soprasteria"
+identifier = "hugodoc"
+url = "https://www.soprasteria.com/"
+weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
+
+
